@@ -1,0 +1,386 @@
+{
+  "id": "b5a7b038-86bd-4700-9454-c0fb0db4467d",
+  "version": "2.0",
+  "name": "DOTTechnicalTest",
+  "url": "https://my-vue-todos.netlify.app/",
+  "tests": [{
+    "id": "8479a4e4-51af-4142-abf9-15c3db730d98",
+    "name": "FulltestMyTo-Dos",
+    "commands": [{
+      "id": "a9f368b2-1366-466c-a4f5-ca59681c415c",
+      "comment": "Open My to-dos App",
+      "command": "open",
+      "target": "https://my-vue-todos.netlify.app/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "407401d2-f574-405d-9ba8-d9d04657d551",
+      "comment": "Waiting for My to-dos finish to load",
+      "command": "waitForElementVisible",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'My to-dos')]", "xpath:innerText"]
+      ],
+      "value": "My to-dos"
+    }, {
+      "id": "9032aaeb-8eb6-49d5-a10b-fe19bc33f07c",
+      "comment": "Verify Title App",
+      "command": "verifyText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "My to-dos"
+    }, {
+      "id": "ffa99487-b546-40b1-abd7-22fb86d7a07d",
+      "comment": "Verify To Do List Item (Item 1)",
+      "command": "verifyText",
+      "target": "css=.d-flex:nth-child(1) > .flex-grow-1",
+      "targets": [
+        ["css=.d-flex:nth-child(1) > .flex-grow-1", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Do the dishes')]", "xpath:innerText"]
+      ],
+      "value": "Do the dishes"
+    }, {
+      "id": "0f8688b0-f789-4f51-a525-c062b9c0a3f4",
+      "comment": "Verify To Do List Item (Item 2)",
+      "command": "verifyText",
+      "target": "css=.d-flex:nth-child(2) > .flex-grow-1",
+      "targets": [
+        ["css=.d-flex:nth-child(1) > .flex-grow-1", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Do the dishes')]", "xpath:innerText"]
+      ],
+      "value": "Take out the trash"
+    }, {
+      "id": "e118da60-f36d-45c2-a4af-82ab999c6983",
+      "comment": "Verify To Do List Item (Item 3)",
+      "command": "verifyText",
+      "target": "css=.d-flex:nth-child(3) > .flex-grow-1",
+      "targets": [
+        ["css=.d-flex:nth-child(1) > .flex-grow-1", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Do the dishes')]", "xpath:innerText"]
+      ],
+      "value": "Finish doing laundry"
+    }, {
+      "id": "0b494014-714b-41be-a019-f8f0e9e17451",
+      "comment": "Click button Edit on To Do List Item 1",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(1) > .btn-outline-primary > .fa",
+      "targets": [
+        ["css=.d-flex:nth-child(1) > .btn-outline-primary > .fa", "css:finder"],
+        ["xpath=//button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a32c7176-a4d5-4e3c-a7ac-b8734ca3689e",
+      "comment": "Update Text on To Do List Item 1",
+      "command": "type",
+      "target": "css=.flex-grow-1 > .form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li/form/input", "xpath:position"]
+      ],
+      "value": "Edited To Do List Item 1"
+    }, {
+      "id": "de35b731-9707-48b3-b95c-20bf622b1bc6",
+      "comment": "Enter Keyboard to Submit Text",
+      "command": "sendKeys",
+      "target": "css=.flex-grow-1 > .form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li/form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "7a0dcdcc-0247-45f8-b4ad-182bba8a22b8",
+      "comment": "Click button Edit on To Do List Item 2",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(2) > .btn-outline-primary > .fa",
+      "targets": [
+        ["css=.d-flex:nth-child(2) > .btn-outline-primary > .fa", "css:finder"],
+        ["xpath=//li[2]/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5183262e-314d-4358-b32a-4ba56965f77f",
+      "comment": "Update Text on To Do List Item 2",
+      "command": "type",
+      "target": "css=.flex-grow-1 > .form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li[2]/form/input", "xpath:position"]
+      ],
+      "value": "Edited To Do List Item 2"
+    }, {
+      "id": "15a061cc-2b03-451d-9498-70a2122bb021",
+      "comment": "Enter Keyboard to Submit Text",
+      "command": "sendKeys",
+      "target": "css=.flex-grow-1 > .form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li/form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d6218b6c-2949-4946-bcb7-795e5fcdf98e",
+      "comment": "Click button Edit on To Do List Item 3",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(3) > .btn-outline-primary",
+      "targets": [
+        ["css=.d-flex:nth-child(3) > .btn-outline-primary", "css:finder"],
+        ["xpath=//li[3]/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca6e0720-f94e-4cab-bdce-d1e5c01e1286",
+      "comment": "Update Text on To Do List Item 3",
+      "command": "type",
+      "target": "css=.flex-grow-1 > .form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li[3]/form/input", "xpath:position"]
+      ],
+      "value": "Edited To Do List Item 3"
+    }, {
+      "id": "2c810e98-e659-48dc-bc2b-d346f9eaaeb4",
+      "comment": "Enter Keyboard to Submit Text",
+      "command": "sendKeys",
+      "target": "css=.flex-grow-1 > .form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li/form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "004fa81b-1cf0-416e-901f-3e6f2b29b807",
+      "comment": "Mark as Done (To Do List Item 1)",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(1) > .flex-grow-1 > span",
+      "targets": [
+        ["css=.d-flex:nth-child(1) > .flex-grow-1 > span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Edited To Do List Item 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f492b12-f125-41bf-9ccc-a365c0d4408a",
+      "comment": "Mark as Done (To Do List Item 2)",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(2) > .flex-grow-1 > span",
+      "targets": [
+        ["css=.d-flex:nth-child(2) > .flex-grow-1 > span", "css:finder"],
+        ["xpath=//li[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Edited To Do List Item 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41654f15-8879-4fe1-a4c8-3b33604afda9",
+      "comment": "Mark as Done (To Do List Item 3)",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(3) > .flex-grow-1",
+      "targets": [
+        ["css=.d-flex:nth-child(3) > .flex-grow-1", "css:finder"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edited To Do List Item 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5ef7cab-3e5b-4215-8a7f-e6875c93a032",
+      "comment": "Mark as Undone (To Do List Item 1)",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(1) > .flex-grow-1 > span",
+      "targets": [
+        ["css=.d-flex:nth-child(1) > .flex-grow-1 > span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Edited To Do List Item 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0bdec93-b612-4aef-8738-2dad246f17f9",
+      "comment": "Mark as Undone (To Do List Item 2)",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(2) > .flex-grow-1 > span",
+      "targets": [
+        ["css=.d-flex:nth-child(2) > .flex-grow-1 > span", "css:finder"],
+        ["xpath=//li[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Edited To Do List Item 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d20f3657-62bf-46b6-8109-5b580471d9fc",
+      "comment": "Mark as Undone (To Do List Item 3)",
+      "command": "click",
+      "target": "css=.completed > span",
+      "targets": [
+        ["css=.completed > span", "css:finder"],
+        ["xpath=//li[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Edited To Do List Item 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d639ff27-4c16-4f5a-bf61-ecce27d9e66a",
+      "comment": "Click Textbox \"create a new to do\"",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81ea8c99-f97c-4018-9e8f-70439575a57a",
+      "comment": "Input text on textbox \"create a new to do\"",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "This is created new item"
+    }, {
+      "id": "10c99648-282f-479e-bb67-345ae812555b",
+      "comment": "Enter Keyboard to Submit Text",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li/form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "acff8f93-f4fe-4720-9e30-f2669b326e77",
+      "comment": "Verify created new item",
+      "command": "verifyText",
+      "target": "css=.d-flex:nth-child(4) > .flex-grow-1 > span",
+      "targets": [
+        ["css=.d-flex:nth-child(4) > .flex-grow-1 > span", "css:finder"],
+        ["xpath=//li[4]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'This is created new item')]", "xpath:innerText"]
+      ],
+      "value": "This is created new item"
+    }, {
+      "id": "0837c42c-82b6-4f85-847e-e74d4d61706f",
+      "comment": "Click Textbox \"create a new to do\"",
+      "command": "click",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff42dfcf-8764-4171-a4e2-ce1fee53decf",
+      "comment": "Input text on textbox with long char",
+      "command": "type",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.form-control", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }, {
+      "id": "ae74d3fa-48a4-43a1-a1c6-7697b8e85189",
+      "comment": "Enter Keyboard to Submit Text",
+      "command": "sendKeys",
+      "target": "css=.form-control",
+      "targets": [
+        ["css=.flex-grow-1 > .form-control", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//li/form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "fb10620b-269f-42e1-82ce-63aac8268ca6",
+      "comment": "Verify created new item with long char",
+      "command": "verifyText",
+      "target": "css=.d-flex:nth-child(5) > .flex-grow-1 > span",
+      "targets": [
+        ["css=.d-flex:nth-child(5) > .flex-grow-1 > span", "css:finder"],
+        ["xpath=//li[5]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ')]", "xpath:innerText"]
+      ],
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }, {
+      "id": "de7991d0-8a44-4448-b8f7-a9b9bfb4525d",
+      "comment": "Deleted To Do List Item 5",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(5) > .btn-outline-danger > .fa",
+      "targets": [
+        ["css=.d-flex:nth-child(5) > .btn-outline-danger > .fa", "css:finder"],
+        ["xpath=//li[5]/button[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "881c4b1a-44aa-4a4b-a109-0240bfd79a84",
+      "comment": "Deleted To Do List Item 4",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(4) > .btn-outline-danger > .fa",
+      "targets": [
+        ["css=.d-flex:nth-child(4) > .btn-outline-danger > .fa", "css:finder"],
+        ["xpath=//li[4]/button[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "711e0131-d811-4d9e-b888-90465e2eeefe",
+      "comment": "Deleted To Do List Item 3",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(3) > .btn-outline-danger > .fa",
+      "targets": [
+        ["css=.d-flex:nth-child(3) > .btn-outline-danger > .fa", "css:finder"],
+        ["xpath=//li[3]/button[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "68b09f7f-064d-4891-a235-2bbc0e053e31",
+      "comment": "Deleted To Do List Item 2",
+      "command": "click",
+      "target": "css=.d-flex:nth-child(2) > .btn-outline-danger > .fa",
+      "targets": [
+        ["css=.d-flex:nth-child(2) > .btn-outline-danger > .fa", "css:finder"],
+        ["xpath=//li[2]/button[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac123ec7-5e80-46f1-a9c7-f491c5980f0e",
+      "comment": "Deleted To Do List Item 1",
+      "command": "click",
+      "target": "css=.fa-trash",
+      "targets": [
+        ["css=.fa-trash", "css:finder"],
+        ["xpath=//button[3]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af5b7b32-ec8a-48f0-a36d-8c36360744f0",
+      "comment": "Close Browser",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "81561d0a-e15e-4e70-bb56-211437826e0d",
+    "name": "To Do List",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://my-vue-todos.netlify.app/"],
+  "plugins": []
+}
